@@ -2,6 +2,7 @@ import os
 import discord
 from discord.ext import commands
 from web3 import Web3
+import inspect
 
 # Connect to the Ethereum network using Infura with coorect
 w3 = Web3(Web3.HTTPProvider('https://avalanche-mainnet.infura.io/v3/c95c3ea588814fed8c05a6f112c05a23'))
@@ -15,13 +16,13 @@ contract = w3.eth.contract(address=contract_address, abi=contract_abi)
 client = discord.Client()
 
 # Define event listener function
-def handle_event(event):
+async def handle_event(event):
     # Get Discord channel object for the desired channel
     channel = client.get_channel(1081427953713430538)
 
     # Send message to Discord channel
     message = f"A mint has taken place on the smart contract! TxHash: {event['transactionHash'].hex()}"
-    channel.send(message)
+    await channel.send(message)
 
 # Set up Discord bot event listener
 @client.event
@@ -41,7 +42,7 @@ async def on_ready():
 
 # listen for the contract's Minted event
 @contract.on('Minted')
-async def handle_event(sender, event):
+async def handle_minted_event(sender, event):
     # get the address of the account that minted the tokens
     minter = event['args']['minter']
 
