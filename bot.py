@@ -1,4 +1,3 @@
-import os
 import discord
 from discord.ext import commands
 from web3 import Web3
@@ -18,6 +17,7 @@ client = discord.Client()
 # Define event listener function
 async def handle_event(event):
     # Get Discord channel object for the desired channel
+    args = event['args']
     channel = client.get_channel(1081427953713430538)
 
     # Send message to Discord channel
