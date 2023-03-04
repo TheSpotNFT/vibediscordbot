@@ -1,1 +1,3 @@
 # vibediscordbot
+
+gudVibes, badVibes
