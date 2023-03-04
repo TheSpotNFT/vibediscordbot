@@ -1,2 +1,2 @@
-buildpacks: https://github.com/heroku/heroku-buildpack-python.git
+buildpacks: heroku/python
 worker: python bot.py
