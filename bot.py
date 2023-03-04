@@ -4,7 +4,7 @@ from web3 import Web3
 from eth_account import Account
 
 # Connect to the Ethereum network using Infura
-w3 = Web3(Web3.HTTPProvider(os.environ['https://avalanche-mainnet.infura.io/v3/c95c3ea588814fed8c05a6f112c05a23']))
+w3 = Web3(Web3.HTTPProvider('https://avalanche-mainnet.infura.io/v3/c95c3ea588814fed8c05a6f112c05a23'))
 
 # Define contract address and ABI
 contract_address = '0x26DaEb5eDa7bBb8b12d05764502d832feEDA45Ea'
@@ -35,4 +35,4 @@ async def on_ready():
             handle_event(event)
 
 # Start Discord bot
-client.run(os.environ['MTA4MTQyNjMyODc4NTUzOTE1Mg.GIPcEl.CKUUlVlPN6o9tVVlgsOH9d8pwcQCPmGwR8C3Ro'])
+client.run(os.environ[''])
