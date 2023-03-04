@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 from web3 import Web3
 
-# Connect to the Ethereum network using Infura
+# Connect to the Ethereum network using Infura with coorect
 w3 = Web3(Web3.HTTPProvider('https://avalanche-mainnet.infura.io/v3/c95c3ea588814fed8c05a6f112c05a23'))
 
 # Define contract address and ABI
