@@ -4,7 +4,7 @@ from web3 import Web3
 from eth_account import Account
 
 # Connect to the Ethereum network using Infura
-w3 = Web3(Web3.HTTPProvider(os.environ['INFURA_URL']))
+w3 = Web3(Web3.HTTPProvider(os.environ['https://avalanche-mainnet.infura.io/v3/c95c3ea588814fed8c05a6f112c05a23']))
 
 # Define contract address and ABI
 contract_address = '0x...'
